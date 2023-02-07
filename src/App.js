@@ -18,7 +18,7 @@ function App() {
           <li>
             <a href="/about">About Us</a>
           </li>
-          <li> Contact Us </li>
+          <li> Contact Us For a Pet Adoption </li>
         </ul>
       </nav>
     </div>
