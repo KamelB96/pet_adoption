@@ -11,5 +11,14 @@ git pull upstream main
 git checkout main
 git pull upstream main
 
+// New Branch
+git checkout -b <test>
+git branch
+git status
+git add .
+git status
+git commit -m
+git push
+
 
 
