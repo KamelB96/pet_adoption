@@ -1,3 +1,27 @@
+# Pet Adoption Site
+
+Welcome to our Pet Adoption Website. Here you will be able to browse for a new pet
+
+## Features 
+
+Browse a wide selection of pets for adoption.
+Also post your own pets up for adoption for others to view
+View detailed information about each pet, description, picutres, and description.
+Connect with onwers to learn more about their pet and how to adopt them.
+
+## Getting Started
+
+Click on the Pets tab to start viewing the pets up for adoption
+Click on any pet to start the adoption process
+Contact the owners by clicking the email
+
+## Contact Us
+
+If you have any questions please reach out to us 
+Amy@email.com
+Veny@email.com
+Kamel@email.com
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,4 +92,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# pet_adoption

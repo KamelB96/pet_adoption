@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  
 }
 
 .App-logo {
@@ -35,4 +36,42 @@
   to {
     transform: rotate(360deg);
   }
+}
+.topheader {
+  display: flex;
+  
+  align-items: center;
+  justify-content: center;
+  color: blue;
+  font-size: 35px;
+  background-color: white;
+  padding-top: 0px;
+}
+
+
+ .navbar {
+  display: flex;
+  align-content: center;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(86,187,205);
+ 
+ }
+
+nav li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+nav a:hover {
+  color: blue;
 }
