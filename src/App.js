@@ -18,6 +18,7 @@ function App() {
           <li>
             <a href="/about">About Us</a>
           </li>
+          <li> Contact Us </li>
         </ul>
       </nav>
     </div>
