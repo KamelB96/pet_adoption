@@ -1,9 +1,9 @@
-function Home() {
+function Dogs() {
     return (
         <div>
-            <h2>Our DOgs</h2>
+            <h1>Our Dogs</h1>
         </div>
     )
 }
 
-export default Home
+export default Dogs
