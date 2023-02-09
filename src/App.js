@@ -11,6 +11,23 @@ import React from 'react';
 function App() {
   return (
     <div className="App">
+      <h1>Pet Adoption</h1>
+      <br>
+      </br>
+      <nav>
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/dogs">Dogs</a>
+          </li>
+          <li>
+            <a href="/about">About Us</a>
+          </li>
+          <li> Contact Us For a Pet Adoption </li>
+        </ul>
+      </nav>
       <Router>
         <header className='topheader'>
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWQP6DsL65NsAI84Tf4bebrP52TcjU5Za4iML8DEZAs8dgcCq0VrKBMJhJaO0eRs7ZzAU&usqp=CAU" alt="Dog paw" height="50px"></img>
@@ -38,6 +55,7 @@ function App() {
         </div>
 
       </Router>
+
     </div>
   );
 
