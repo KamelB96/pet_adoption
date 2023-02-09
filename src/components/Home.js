@@ -1,5 +1,3 @@
-import { useParams } from 'react-router-dom'
-import { useState } from 'react'
 
 function Home() {
     return (
