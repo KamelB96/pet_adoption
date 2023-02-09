@@ -39,7 +39,6 @@
 }
 .topheader {
   display: flex;
-  
   align-items: center;
   justify-content: center;
   color: blue;
@@ -75,11 +74,6 @@ nav a {
 nav a:hover {
   color: blue;
 }
-
-.form {
-  background-color: rgb(86,187,205);
-}
-
 
 .slider-frame{
       overflow: hidden;
@@ -144,3 +138,13 @@ nav a:hover {
       float: left;
   }
  
+  .form, .homepage, .aboutpage, .contactpage {
+    background-color: rgb(86,187,205);
+  }
+
+  .aboutpara {
+    background-color: rgb(86,187,205);
+    text-align: center;
+  padding-left: 250px; 
+  padding-right: 250px;  
+  }
