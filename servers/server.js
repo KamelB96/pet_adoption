@@ -14,8 +14,8 @@ app.get('/', (req, res) => {
     res.send('Welcome to an Awesome App about Pet Adoption')
 })
 
-//const dogController = require('./controllers/dogs_controller')
-//app.use('/', dogController)
+const dogController = require('./controllers/dogs_controller')
+app.use('/dogs', dogController)
 
 
 
@@ -25,6 +25,6 @@ app.get('*', (req, res) => {
 })
 
 //Listen
-app.listen(PORT, () => {
-    console.log('listening on port', PORT);
+app.listen(3002, () => {
+    console.log('listening on port', 3002);
 })

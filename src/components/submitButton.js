@@ -33,11 +33,11 @@ function handleSubmit(event) {
     });
 }
 
-export default handleSubmit;*/
-
+export default handleSubmit;
+*/
 const submitForm = async () => {
     try {
-    const response = await axios.post('http://localhost:3000/api/submit', 
+    const response = await axios.post('http://localhost:3002/dogs', 
     {
         name : document.getElementById('name').value,
         email : document.getElementById('email').value,

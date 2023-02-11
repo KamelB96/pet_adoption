@@ -32,7 +32,7 @@ dogs.get('/:name', async (req,res) => {
     })
 
 //create a dog
-dogs.post('/api/submit', async (req,res) => {
+dogs.post('/dogs', async (req,res) => {
     try {
         const newDog = await Dog.create(req.body)
         console.log(req.body)
