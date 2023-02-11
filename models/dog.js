@@ -27,7 +27,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
       },
       age: {
-        type: DataTypes.INTEGE,
+        type: DataTypes.INTEGER,
         allowNull: false,
       },
       image_url: {

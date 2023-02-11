@@ -1,12 +1,13 @@
-import submitForm from "./submitButton"
 import React from "react"
+import submitForm from "./submitButton"
 
-function Adoption() {
+function Adoption({dogs}) {
     return ( 
         <div className="form">
             <h1>Adoption Form</h1>
         <form>
-        <label htmlFor="name">Name:</label><br></br>
+        <label htmlFor="name">Name:</label>
+        <br></br>
         <input type="text" id="name" name="name" required></input>
         <br></br>
         <hr></hr>
@@ -22,7 +23,7 @@ function Adoption() {
         <hr></hr>
         
         <label htmlFor="image">Image URL:</label><br></br>
-        <input type="url" id="image" name="image" required></input>
+        <input type="text" id="image" name="image" required></input>
         <br></br>
         <hr></hr>
         
@@ -31,7 +32,7 @@ function Adoption() {
         <br></br>
         <hr></hr>
         
-        <input type="submit" onSubmit={ submitForm } value="Submit"></input>
+        <input type="submit" onSubmit={ submitForm }></input>
     </form>
     
     </div>
