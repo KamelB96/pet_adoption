@@ -7,13 +7,13 @@ const { Op } = require('sequelize')
 dogs.get('/', async (req,res) => {
     try {
         const foundDogs = await Dog.findAll(
-            //{
-           // order: [ [ 'age', 'ASC' ] ],
-            //where: {
-            //    name :{[Op.like]: `%${req.query.name ? req.query.name : ''}%`}
+            {
+           //order: [ [ 'age', 'ASC' ] ],
+            where: {
+               name :{[Op.like]: `%${req.query.name ? req.query.name : ''}%`}
 
-// }
-//         }
+}
+        }
 )
         res.status(200).json(foundDogs)
     } catch (error) {

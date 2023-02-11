@@ -1,18 +1,43 @@
-const React = require('react')
+import React, {useState, useEffect} from "react";
+import axios from "axios"
 
 function Dogs() {
+
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        const fetchData =async () => {
+            const result = await axios(
+                "http://localhost:3002/dogs"
+            );
+            setData(result.data);
+        };
+        fetchData();
+    }, []);
     return (
         <div>
+            {data.map((dogs) => (
+        <div key={dogs.dog_id}>
+          <h3>{dogs.name}</h3>
+          <p>
+            {dogs.name} is a {dogs.breed}. It is {dogs.age} years old
+            <br></br>
+            <img src='{dogs.image_url}' alt='dog'></img>
 
-            <h1>Our Dogs</h1><br></br>
-            {/* <div className='dog_card'>
-                <div className='dog_image'><img src='{dogs.image_url}'></img></div>
+          </p>
+        </div>
+      ))}
+
+            {/* <h1>Our Dogs</h1><br></br>
+             <div className='dog_card'>
+                <div className='dog_image'><img src='{dogs.image_url}' alt='dog'></img></div>
                 <h3>{dogs.name}</h3>
                 <p>{dogs.name} is a {dogs.breed}. It is {dogs.age} years old</p>
             
-                    <form action={`/dogs/${dog.dog_id}?_method=DELETE`} method="POST"></form>
+                    <form action={`/dogs/${dogs.dog_id}?_method=DELETE`} method="DELETE">
                     <input type="submit" value="DELETE" />
-                    </div> */}
+                    </form>
+                    </div>  */}
             </div>
             ) 
 }
