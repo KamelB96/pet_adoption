@@ -1,14 +1,14 @@
 {
   "development": {
     "username": "postgres",
-    "password": "Gr33nmachine",
+    "password": "Barakat",
     "database": "pet_adoption",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
     "username": "postgres",
-    "password": "Greenmachine",
+    "password": "Barakat",
     "database": "pet_adoption_test",
     "host": "127.0.0.1",
     "dialect": "postgres"
