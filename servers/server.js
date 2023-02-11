@@ -1,4 +1,6 @@
-const express = require('express')
+const express = require('express');
+const cors = require('cors');
+const bodyParser = require('body-parser');
 
 //configuration
 require('dotenv').config()
@@ -7,17 +9,17 @@ const app = express()
 
 // DEPENDENCIES
 // MIDDLEWARE
-app.use(express.urlencoded({extended: true}))
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(cors());
+app.use(bodyParser.json());
+
+const dogController = require('./controllers/dogs_controller')
+app.use('/dogs', dogController)
 
 // ROUTES
 app.get('/', (req, res) => {
     res.send('Welcome to an Awesome App about Pet Adoption')
 })
-
-const dogController = require('./controllers/dogs_controller')
-app.use('/dogs', dogController)
-
-
 
 // 404 Page
 app.get('*', (req, res) => {
