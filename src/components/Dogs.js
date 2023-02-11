@@ -14,7 +14,7 @@ function Dogs() {
                     <input type="submit" value="DELETE" />
                     </div> */}
             </div>
-            )
+            ) 
 }
-
+ 
             export default Dogs

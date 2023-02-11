@@ -7,7 +7,7 @@ function Contact() {
             <a href="tel:+1-555-555-5555">Call us</a>
             </div>
         </div>
-        
+         
     )
 }
 

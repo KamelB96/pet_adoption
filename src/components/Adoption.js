@@ -2,7 +2,7 @@ import submitForm from "./submitButton"
 import React from "react"
 
 function Adoption() {
-    return (
+    return ( 
         <div className="form">
             <h1>Adoption Form</h1>
         <form>

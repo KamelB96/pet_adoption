@@ -11,7 +11,7 @@ function About() {
                  We provide a detailed profile sbout each pet to help you find the right one.
                 </p>
                 </div>
-        </div>
+        </div> 
     )
 }
 
