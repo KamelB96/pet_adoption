@@ -20,11 +20,18 @@ function Dogs() {
         <div key={dogs.dog_id}>
           <h3>{dogs.name}</h3>
           <p>
-            {dogs.name} is a {dogs.breed}. It is {dogs.age} years old
+            {dogs.name} is a {dogs.breed}. It is {dogs.age} years old.
             <br></br>
-            <img src='{dogs.image_url}' alt='dog'></img>
+            <a href="mailto:{dogs.email}"> Contact Owner </a>
+
+            <br></br>
+            <br></br>
+            <img src={dogs.image_url} alt='dog'></img>
 
           </p>
+          <form action={`/dogs/${dogs.dog_id}?_method=DELETE`} method="DELETE">
+                    <input type="submit" value="DELETE" />
+                    </form>
         </div>
       ))}
 
@@ -34,9 +41,7 @@ function Dogs() {
                 <h3>{dogs.name}</h3>
                 <p>{dogs.name} is a {dogs.breed}. It is {dogs.age} years old</p>
             
-                    <form action={`/dogs/${dogs.dog_id}?_method=DELETE`} method="DELETE">
-                    <input type="submit" value="DELETE" />
-                    </form>
+                    
                     </div>  */}
             </div>
             ) 

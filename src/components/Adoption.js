@@ -4,7 +4,7 @@ import axios from 'axios';
 
 function Adoption() {
     const submitForm = (e) => {
-        e.preventDefault();
+        //e.preventDefault();
         const options = {
             name : document.getElementById('name').value,
             email : document.getElementById('email').value,
