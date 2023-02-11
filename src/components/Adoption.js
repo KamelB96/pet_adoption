@@ -1,11 +1,32 @@
-import React from "react"
-import submitForm from "./submitButton"
+import React from "react";
+import axios from 'axios';
+// import submitForm from "./submitButton";
 
-function Adoption({dogs}) {
+function Adoption() {
+    const submitForm = (e) => {
+        e.preventDefault();
+        const options = {
+            name : document.getElementById('name').value,
+            email : document.getElementById('email').value,
+            breed : document.getElementById('breed').value,
+            image_url : document.getElementById('image').value,
+            age : document.getElementById('age').value,
+        }
+        console.log(options, 'line 13');
+          axios.post('http://localhost:3002/dogs', {
+            name : document.getElementById('name').value,
+            email : document.getElementById('email').value,
+            breed : document.getElementById('breed').value,
+            image_url : document.getElementById('image').value,
+            age : document.getElementById('age').value,
+        })
+            .then(res => console.log(res, 'line 47'))
+            .catch(err => console.log(err));
+      };
     return ( 
         <div className="form">
             <h1>Adoption Form</h1>
-        <form>
+        <form onSubmit={ submitForm }>
         <label htmlFor="name">Name:</label>
         <br></br>
         <input type="text" id="name" name="name" required></input>
@@ -32,7 +53,7 @@ function Adoption({dogs}) {
         <br></br>
         <hr></hr>
         
-        <input type="submit" onSubmit={ submitForm }></input>
+        <input type="submit"></input>
     </form>
     
     </div>

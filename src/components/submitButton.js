@@ -35,22 +35,24 @@ function handleSubmit(event) {
 
 export default handleSubmit;
 */
-const submitForm = async () => {
-    try {
-    const response = await axios.post('http://localhost:3002/dogs', 
-    {
-        name : document.getElementById('name').value,
-        email : document.getElementById('email').value,
-        breed : document.getElementById('breed').value,
-        image : document.getElementById('image').value,
-        age : document.getElementById('age').value,
-    });
-    console.log(response.data);
-    alert("Form submitted successfully!");
-    } catch (error) {
-    console.error(error);
-    alert("There was an error submitting the form. Please try again.");
-    }
+const submitForm = () => {
+  const options = {
+      name : document.getElementById('name').value,
+      email : document.getElementById('email').value,
+      breed : document.getElementById('breed').value,
+      image_url : document.getElementById('image').value,
+      age : document.getElementById('age').value,
+  }
+  console.log(options, 'line 46');
+    axios.post('http://localhost:3002/dogs', options)
+      .then(res => console.log(res, 'line 47'))
+      .catch(err => console.log(err));
+    // console.log(response.data);
+    // alert("Form submitted successfully!");
+    // } catch (error) {
+    // console.error(error);
+    // alert("There was an error submitting the form. Please try again.");
+    // }
 };
 
 
