@@ -1,45 +1,57 @@
-import React, {useState, useEffect} from "react";
-import axios from "axios"
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 function Dogs() {
-
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        const fetchData =async () => {
-            const result = await axios(
-                "http://localhost:3002/dogs"
-            );
-            setData(result.data);
-        };
-        fetchData();
+    const fetchData = async () => {
+        const result = await axios("http://localhost:3002/dogs");
+        setData(result.data);
+    };
+    fetchData();
     }, []);
+
+    const handleDelete = async (id) => {
+    try {
+        const response = await axios.delete(`http://localhost:3002/dogs/${id}`);
+        if (response.status === 200) {
+        setData(data.filter((dogs) => dogs.dog_id !== id));
+        } else {
+        console.error("Delete request failed");
+        }
+    } catch (error) {
+        console.error(error);
+    }
+    };
+
     return (
-        <div>
-            {data.map((dogs) => (
+    <div>
+        {data.map((dogs) => (
         <div key={dogs.dog_id}>
-          <h3>{dogs.name}</h3>
-          <p>
-            {dogs.name} is a {dogs.breed}. It is {dogs.age} years old
+            <h3>{dogs.name}</h3>
+            <p>
+            {dogs.name} is a {dogs.breed}. It is {dogs.age} years old.
             <br></br>
-            <img src='{dogs.image_url}' alt='dog'></img>
-
-          </p>
+            <a href="mailto:{dogs.email}"> Contact Owner </a>
+            <br></br>
+            <br></br>
+            <img src={dogs.image_url} alt="dog"></img>
+            </p>
+            <button onClick={() => handleDelete(dogs.dog_id)}>Delete</button>
         </div>
-      ))}
+        ))}
 
-            {/* <h1>Our Dogs</h1><br></br>
-             <div className='dog_card'>
+        {/* <h1>Our Dogs</h1><br></br>
+                <div className='dog_card'>
                 <div className='dog_image'><img src='{dogs.image_url}' alt='dog'></img></div>
                 <h3>{dogs.name}</h3>
                 <p>{dogs.name} is a {dogs.breed}. It is {dogs.age} years old</p>
             
-                    <form action={`/dogs/${dogs.dog_id}?_method=DELETE`} method="DELETE">
-                    <input type="submit" value="DELETE" />
-                    </form>
+                    
                     </div>  */}
-            </div>
-            ) 
+    </div>
+    );
 }
- 
-            export default Dogs
+
+export default Dogs;

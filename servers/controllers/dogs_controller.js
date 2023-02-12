@@ -68,7 +68,7 @@ dogs.put('/:id', async (req, res) => {
     }
 })
 
-// DELETE A BAND
+// DELETE A dog
 dogs.delete('/:id', async (req, res) => {
     try {
         const deletedDogs = await Dog.destroy({
