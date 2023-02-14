@@ -53,8 +53,8 @@ dogs.post('/', async (req,res) => {
     })
 
 // EDIT A DOG
-dogs.put('dogs/:id', async (req, res) => {
-    console.log(req.body, "console logging req body for edit")
+dogs.put('/:id', async (req, res) => {
+    console.log(req.body, req.params.id, "console logging req body for edit")
     try {
         const updatedDogs = await Dog.update(req.body, {
             where: {

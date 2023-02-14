@@ -18,28 +18,36 @@ function Edit (){
   const handleEdit = (dog) => {
     setEditingDog(dog);
   };
-
-  const handleUpdate = async () => {
-    const updated = {
-      dogName,
-      dogBreed,
-      dogAge,
-      dogImage,
-      dogEmail,
-    }
     
-    try {
-      const response = await axios.put(`/api/dogs/${updated.dog_id}`, updated);
-    } catch (error) {
-      console.error(error);
-    }
-  };
+    const handleUpdate = e => {
+      e.preventDefault();
+
+      const updated = {
+        dogName,
+        dogBreed,
+        dogAge,
+        dogImage,
+        dogEmail,
+      }
+      axios
+        .put(`http://localhost:3002/dogs/${id}`, updated, {
+          headers: { "Content-Type": "application/json" }
+        })
+        .then(res => {
+          console.log(res.data);
+          // Redirect to the updated dog's page
+        })
+        .catch(err => {
+          console.error(err);
+        });
+    };
+  
   console.log(dogName);
   return(
 
     <div className="form">
             <h1>Edit Information</h1>
-        <form action={`/dogs/${id}`} method="PUT">
+        <form>
         <label htmlFor="name">Name:</label>
         <br></br>
         <input type="text" id="name" name="name" required onChange={(e) => setDogName(e.target.value)}></input>
@@ -66,7 +74,7 @@ function Edit (){
         <br></br>
         <hr></hr>
         
-        <button onClick={() => handleUpdate(dogs.dog_id)}>Submit</button>
+        <button onClick={(e) => handleUpdate(e)}>Submit</button>
     </form>
     
     </div>
