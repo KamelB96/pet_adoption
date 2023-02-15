@@ -138,13 +138,25 @@ nav a:hover {
       float: left;
   }
  
-  .form, .homepage, .aboutpage, .contactpage {
+  .form, .aboutpage, .contactpage {
     background-color: rgb(86,187,205);
   }
 
-  .aboutpara {
+  .aboutpara, .homepage {
     background-color: rgb(86,187,205);
     text-align: center;
   padding-left: 250px; 
   padding-right: 250px;  
   }
+
+  .dogDisplay {
+    background-color: white;
+
+  }
+.border{
+  background-color: rgb(86,187,205);
+  border-style: solid;
+  border-color: black;
+  margin-right: 500px;
+  margin-left: 500px;
+}
