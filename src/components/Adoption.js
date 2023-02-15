@@ -1,10 +1,8 @@
 import React from "react";
 import axios from 'axios';
-// import submitForm from "./submitButton";
 
 function Adoption() {
     const submitForm = (e) => {
-        //e.preventDefault();
         const options = {
             name : document.getElementById('name').value,
             email : document.getElementById('email').value,
