@@ -38,6 +38,9 @@
   }
 }
 .topheader {
+  /* position:sticky;
+  top: 0; */
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -49,6 +52,9 @@
 
 
  .navbar {
+  position:sticky;
+  top: 0;
+  width: 100%;
   display: flex;
   align-content: center;
   text-align: center;
@@ -62,6 +68,7 @@ nav li {
   list-style: none;
   display: inline-block;
   margin: 0 20px;
+  font-weight: bold;
   
 }
 
@@ -139,18 +146,18 @@ nav a:hover {
   }
  
   .form, .aboutpage, .contactpage {
-    background-color: rgb(86,187,205);
+    background-color: rgb(206, 230, 235);
   }
 
   .aboutpara, .homepage {
-    background-color: rgb(86,187,205);
+    background-color: rgb(206, 230, 235);
     text-align: center;
   padding-left: 250px; 
   padding-right: 250px;  
   }
 
   .dogDisplay {
-    background-color: white;
+    background-color: rgb(206, 230, 235);
     display: flex;
 
 
@@ -159,8 +166,8 @@ nav a:hover {
   background-color: rgb(86,187,205);
   border-style: solid;
   border-color: black;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
   padding-bottom: 10px;
   margin: 10px;
   margin-left: auto;
@@ -169,10 +176,18 @@ nav a:hover {
  
 }
 
-/* .dogPage{
-  background-color: red;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
-} */
+h2{
+  color: blue;
+  text-decoration: underline;
+  
+}
+
+h3{
+  font-family: 'Courier New', Courier, monospace;
+}
+
+Button{
+  padding: 1em;
+  margin: 1em;
+  background-color: antiquewhite;
+}

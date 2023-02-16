@@ -23,7 +23,9 @@ function Adoption() {
       };
     return ( 
         <div className="form">
-            <h1>Adoption Form</h1>
+            <h1>Adoption Request Form</h1>
+            <h2>Please provide pet information below to request for adoption</h2>
+            <br></br>
         <form onSubmit={ submitForm }>
         <label htmlFor="name">Name:</label>
         <br></br>

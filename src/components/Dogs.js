@@ -40,6 +40,7 @@ function Dogs() {
             <p>
             {dogs.name} is a {dogs.breed}. It is {dogs.age} years old.
             <br></br>
+            <br></br>
             <a href="mailto:{dogs.email}"> Contact Owner </a>
 
             </p>
