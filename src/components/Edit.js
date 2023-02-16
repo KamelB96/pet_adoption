@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from "axios";
 
 function Edit (){
@@ -6,7 +6,7 @@ function Edit (){
   id = id[id.length -1]
   console.log(id)
 
-  const [dogs, setDogs] = useState([]);
+  const [dog, setDog] = useState([]);
   const [editingDog, setEditingDog] = useState(null);
   const [ dogName, setDogName ] = useState('');
   const [ dogBreed, setDogBreed ] = useState('');
@@ -14,18 +14,23 @@ function Edit (){
   const [ dogImage, setDogImage ] = useState('');
   const [ dogEmail, setDogEmail ] = useState('');
   
-  // const [dog, setDog] = useState({
-  //   dogName: '',
-  //   dogBreed: '',
-  //   dogAge: '',
-  //   dogImage: '',
-  //   dogEmail: ''
-  // })
-
-
-  const handleEdit = (dog) => {
-    setEditingDog(dog);
-  };
+  useEffect(() => {
+    console.log(`${id} to autopopulate`)
+    axios.get(`http://localhost:3002/dogs/${id}`)
+    .then(res => {
+      console.log(res.data)
+      const { name, breed, age, image_url, email } = res.data;
+      setDogName(name);
+      setDogBreed(breed);
+      setDogAge(age);
+      setDogImage(image_url);
+      setDogEmail(email);
+    })
+    .catch(err => {
+      console.error(err);
+    });
+  }, [id]); // add id as a dependency
+   
     
     const handleUpdate = e => {
 
@@ -43,33 +48,15 @@ function Edit (){
         .then(res => {
           console.log(res.data);
           // Redirect to the updated dog's page
+          res.redirect(`http://localhost:3002/dogs`)
         })
         .catch(err => {
           console.error(err);
         });
     };
-
-    useEffect(() => {
-      console.log(`${id} to autopopulate`)
-      axios.get(`http://localhost:3002/dogs/${id}`)
-      .then(res => {
-        console.log(res.data)
-        const { name, breed, age, image_url, email } = res.data;
-        setDogName(name);
-        setDogBreed(breed);
-        setDogAge(age);
-        setDogImage(image_url);
-        setDogEmail(email);
-      })
-      .catch(err => {
-        console.error(err);
-      },[]);
-    })
   
-  
-  console.log(dogBreed);
+  console.log(dogName);
   return(
-
     <div className="form">
             <h1>Edit Information</h1>
         <form>
@@ -99,7 +86,7 @@ function Edit (){
         <br></br>
         <hr></hr>
         
-        <button onClick={(e) => handleUpdate(e)}>Submit</button>
+        <button onClick={(e) => handleUpdate(e)}>Submit Edit</button>
     </form>
     
     </div>
