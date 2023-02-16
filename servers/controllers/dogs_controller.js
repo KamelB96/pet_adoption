@@ -21,12 +21,13 @@ dogs.get('/', async (req,res) => {
     })
 
 
-dogs.get('/:name', async (req,res) => {
+dogs.get('/:id', async (req,res) => {
     try {
-        const foundDog = awaitDog.findOne({
-            where: { name: req.params.name }, 
+        const foundDog = await Dog.findOne({
+            where: { dog_id: req.params.id }, 
         })
-        res.status(200).json(foundDog)
+        console.log(foundDog.dataValues)
+        res.status(200).json(foundDog.dataValues)
     } catch (error) {
         res.status(500).json(error)
     }

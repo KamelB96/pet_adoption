@@ -1,21 +1,21 @@
 {
   "development": {
     "username": "postgres",
-    "password": "Barakat",
+    "password": "admin",
     "database": "pet_adoption",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
     "username": "postgres",
-    "password": "Barakat",
+    "password": "admin",
     "database": "pet_adoption_test",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
     "username": "postgres",
-    "password": "Barakat",
+    "password": "admin",
     "database": "pet_adoption_production",
     "host": "127.0.0.1",
     "dialect": "postgres"

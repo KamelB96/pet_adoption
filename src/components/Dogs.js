@@ -29,7 +29,7 @@ function Dogs() {
     };
 
     return (
-    <div>
+    <div className="dogPage">
         <br></br>
         {data.map((dogs) => (
         <div className="dogDisplay" key={dogs.dog_id}>
@@ -39,6 +39,7 @@ function Dogs() {
             <img src={dogs.image_url} alt="dog"></img>
             <p>
             {dogs.name} is a {dogs.breed}. It is {dogs.age} years old.
+            <br></br>
             <br></br>
             <a href="mailto:{dogs.email}"> Contact Owner </a>
 
