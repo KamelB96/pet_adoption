@@ -29,7 +29,7 @@ function Dogs() {
     };
 
     return (
-    <div>
+    <div className="dogPage">
         <br></br>
         {data.map((dogs) => (
         <div className="dogDisplay" key={dogs.dog_id}>

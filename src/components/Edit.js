@@ -20,7 +20,6 @@ function Edit (){
   };
     
     const handleUpdate = e => {
-      e.preventDefault();
 
       const updated = {
         dogName,
@@ -50,7 +49,7 @@ function Edit (){
         <form>
         <label htmlFor="name">Name:</label>
         <br></br>
-        <input type="text" id="name" name="name" required onChange={(e) => setDogName(e.target.value)}></input>
+        <input type="text" id="name" name="name" value="dogName" required onChange={(e) => setDogName(e.target.value)}></input>
         <br></br>
         <hr></hr>
 

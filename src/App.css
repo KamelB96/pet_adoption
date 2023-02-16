@@ -151,12 +151,28 @@ nav a:hover {
 
   .dogDisplay {
     background-color: white;
+    display: flex;
+
 
   }
 .border{
   background-color: rgb(86,187,205);
   border-style: solid;
   border-color: black;
-  margin-right: 500px;
-  margin-left: 500px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 10px;
+  margin: 10px;
+  margin-left: auto;
+  margin-right: auto;
+
+ 
 }
+
+/* .dogPage{
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+} */
