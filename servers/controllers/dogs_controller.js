@@ -52,20 +52,25 @@ dogs.post('/', async (req,res) => {
     })
 
 // EDIT A DOG
-dogs.put('/:id', async (req, res) => {
+dogs.put('/:id',  (req, res) => {
     console.log(req.body, req.params.id, "console logging req body for edit")
-    try {
-        const updatedDogs = await Dog.update(req.body, {
+     const updatedData = {
+        name: req.body.dogName,
+        breed: req.body.dogBreed,
+        age: req.body.dogAge,
+        image:req.body.dogImage,
+        email:req.body.dogEmail}
+console.log(updatedData)
+    Dog.update(updatedData, {
             where: {
                 dog_id: req.params.id
             }
-        })
-        res.status(200).json({
-            message: `Successfully updated ${updatedDogs} dog(s)`
-        })
-    } catch(err) {
-        res.status(500).json(err)
-    }
+        }).then(() =>  res.status(200).json({
+            message: `Successfully updated dog(s)`
+        }))
+        .catch(err => console.log(err));
+       
+
 })
 
 // DELETE A dog

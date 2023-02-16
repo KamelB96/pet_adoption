@@ -44,7 +44,7 @@ function Dogs() {
 
             </p>
             <button onClick={() => handleDelete(dogs.dog_id)}>Delete</button>
-            <Link to={`/dogs/${dogs.dog_id}`}><button>Edit_Link</button></Link>
+            <Link to={`/dogs/${dogs.dog_id}`}><button>Edit</button></Link>
             </div>
             <br></br>
         </div>
