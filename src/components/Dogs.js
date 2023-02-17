@@ -29,7 +29,7 @@ function Dogs() {
     };
 
     return (
-    <div className="dogPage">
+    <div className="dogPage">  
         <br></br>
         <h1>View All Dogs</h1>
         <h3>Please contact owners directly to discuss adoption details or to address any questions</h3>
