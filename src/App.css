@@ -150,7 +150,7 @@ nav a:hover {
   }
 
   .aboutpara, .homepage {
-    background-color: rgb(206, 230, 235);
+    background-color:rgb(206, 230, 235);
     text-align: center;
   padding-left: 250px; 
   padding-right: 250px;  
@@ -197,4 +197,24 @@ Button{
 #success{
   font-size: 45px;
   color: green;
+}
+
+.dogPage{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  background-color: rgb(206, 230, 235)
+}
+
+.dogPageContent{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.dogDisplay{
+  padding: 2em;
 }

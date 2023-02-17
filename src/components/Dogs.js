@@ -29,11 +29,14 @@ function Dogs() {
     };
 
     return (
-    <div className="dogPage">  
-        <br></br>
-        <h1>View All Dogs</h1>
-        <h3>Please contact owners directly to discuss adoption details or to address any questions</h3>
-        {data.map((dogs) => (
+    <div className="dogPage">       
+        <div className="dogPageTitle">
+            <h1>View All Dogs</h1>
+            <h3>Please contact owners directly to discuss adoption details or to address any questions</h3>
+        </div>
+        <div className="dogPageContent">
+        {data.map((dogs) => {
+            return(
         <div className="dogDisplay" key={dogs.dog_id}>
             <div className="border">
             <h3>{dogs.name}</h3>
@@ -43,7 +46,7 @@ function Dogs() {
             {dogs.name} is a {dogs.breed}. It is {dogs.age} years old.
             <br></br>
             <br></br>
-            <a href="mailto:{dogs.email}"> Contact Owner </a>
+            <a href={`mailto:${dogs.email}`}> Contact Owner </a>
 
             </p>
             <button onClick={() => handleDelete(dogs.dog_id)}>Delete</button>
@@ -51,7 +54,9 @@ function Dogs() {
             </div>
             <br></br>
         </div>
-        ))}
+      )}
+    )}
+    </div>
     </div>
     );
 }
