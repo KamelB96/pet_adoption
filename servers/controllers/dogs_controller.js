@@ -66,9 +66,10 @@ console.log(updatedData)
             where: {
                 dog_id: req.params.id
             }
-        }).then(() =>  res.status(200).json({
+        }).then(() => res.status(200).json({
             message: `Successfully updated dog(s)`
-        }))
+        })
+        )
         .catch(err => console.log(err));
        
 

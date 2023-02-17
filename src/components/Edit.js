@@ -33,7 +33,7 @@ function Edit (){
    
     
     const handleUpdate = e => {
-
+      e.preventDefault();
       const updated = {
         dogName,
         dogBreed,
@@ -48,7 +48,7 @@ function Edit (){
         .then(res => {
           console.log(res.data);
           // Redirect to the updated dog's page
-          res.redirect(`http://localhost:3002/dogs`)
+          window.location.href = `http://localhost:3000/dogs`
         })
         .catch(err => {
           console.error(err);
