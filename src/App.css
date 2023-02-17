@@ -145,7 +145,7 @@ nav a:hover {
       float: left;
   }
  
-  .form, .aboutpage, .contactpage {
+  .form, .aboutpage, .contactpage, .dogPage {
     background-color: rgb(206, 230, 235);
   }
 
@@ -176,6 +176,8 @@ nav a:hover {
  
 }
 
+
+
 h2{
   color: blue;
   text-decoration: underline;
@@ -190,4 +192,9 @@ Button{
   padding: 1em;
   margin: 1em;
   background-color: antiquewhite;
+}
+
+#success{
+  font-size: 45px;
+  color: green;
 }

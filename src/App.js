@@ -4,7 +4,8 @@ import Contact from './components/Contact';
 import Dogs from './components/Dogs';
 import Home from './components/Home';
 import Adoption from './components/Adoption';
-import Edit from './components/Edit'
+import Edit from './components/Edit';
+import Msg from './components/Msg';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import React from 'react';
 
@@ -36,6 +37,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/dogs/:dogid" element={<Edit />} />
+            <Route path="/msg" element={<Msg />} />
           </Routes>
         </div>
 

@@ -31,6 +31,8 @@ function Dogs() {
     return (
     <div className="dogPage">
         <br></br>
+        <h1>View All Dogs</h1>
+        <h3>Please contact owners directly to discuss adoption details or to address any questions</h3>
         {data.map((dogs) => (
         <div className="dogDisplay" key={dogs.dog_id}>
             <div className="border">

@@ -48,7 +48,7 @@ function Edit (){
         .then(res => {
           console.log(res.data);
           // Redirect to the updated dog's page
-          window.location.href = `http://localhost:3000/dogs`
+          window.location.href = 'http://localhost:3000/dogs'
         })
         .catch(err => {
           console.error(err);
