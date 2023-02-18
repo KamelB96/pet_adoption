@@ -163,7 +163,7 @@ nav a:hover {
 
   }
 .border{
-  background-color: rgb(86,187,205);
+  background-color: rgb(141, 200, 209);
   border-style: solid;
   border-color: black;
   padding-left: 20px;
@@ -172,6 +172,7 @@ nav a:hover {
   margin: 10px;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 30px;
 
  
 }
@@ -217,4 +218,16 @@ Button{
 
 .dogDisplay{
   padding: 2em;
+}
+
+.dropdown{
+  position: relative;
+}
+
+.dropdown-doggle{
+  position: absolute;
+}
+
+img{
+  border-radius: 30px;
 }
