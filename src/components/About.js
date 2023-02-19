@@ -17,7 +17,7 @@ function About() {
                     We provide a detailed profile sbout each pet to help you find the right one.
                 </p>
                 <a href="/dogs"><Button>View All Dogs</Button></a>
-                <a href="/adoption"><Button>Adopt Now</Button></a>
+                <a href="/adoption"><Button>Adopt Form</Button></a>
                 </div>
         </div> 
     )

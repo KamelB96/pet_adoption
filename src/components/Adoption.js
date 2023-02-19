@@ -1,8 +1,11 @@
 import React from "react";
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 function Adoption() {
+    const navigate = useNavigate();
     const submitForm = (e) => {
+        e.preventDefault();
         const options = {
             name : document.getElementById('name').value,
             email : document.getElementById('email').value,
@@ -18,13 +21,17 @@ function Adoption() {
             image_url : document.getElementById('image').value,
             age : document.getElementById('age').value,
         })
-            .then(res => console.log(res, 'line 47'))
+            .then(res => {
+                console.log(res, 'line 47');
+                navigate('/msg');
+            })
             .catch(err => console.log(err));
       };
     return ( 
         <div className="form">
-            <h1>Adoption Request Form</h1>
-            <h2>Please provide pet information below to request for adoption</h2>
+            <h1>Adoption Form</h1>
+            <h2>Does you pet need a new home?</h2>
+            <h4>Please provide pet information below to add your pet to our list for adoption</h4>
             <br></br>
         <form onSubmit={ submitForm }>
         <label htmlFor="name">Name:</label>

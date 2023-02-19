@@ -145,12 +145,12 @@ nav a:hover {
       float: left;
   }
  
-  .form, .aboutpage, .contactpage {
+  .form, .aboutpage, .contactpage, .dogPage {
     background-color: rgb(206, 230, 235);
   }
 
   .aboutpara, .homepage {
-    background-color: rgb(206, 230, 235);
+    background-color:rgb(206, 230, 235);
     text-align: center;
   padding-left: 250px; 
   padding-right: 250px;  
@@ -163,7 +163,7 @@ nav a:hover {
 
   }
 .border{
-  background-color: rgb(86,187,205);
+  background-color: rgb(141, 200, 209);
   border-style: solid;
   border-color: black;
   padding-left: 20px;
@@ -172,9 +172,12 @@ nav a:hover {
   margin: 10px;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 30px;
 
  
 }
+
+
 
 h2{
   color: blue;
@@ -190,4 +193,41 @@ Button{
   padding: 1em;
   margin: 1em;
   background-color: antiquewhite;
+}
+
+#success{
+  font-size: 45px;
+  color: green;
+}
+
+.dogPage{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  background-color: rgb(206, 230, 235)
+}
+
+.dogPageContent{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.dogDisplay{
+  padding: 2em;
+}
+
+.dropdown{
+  position: relative;
+}
+
+.dropdown-doggle{
+  position: absolute;
+}
+
+img{
+  border-radius: 30px;
 }

@@ -22,7 +22,7 @@ function Home() {
             </p>
             <br></br>
             <a href="/dogs"><Button>View All Dogs</Button></a>
-                <a href="/adoption"><Button>Adopt Now</Button></a>
+                <a href="/adoption"><Button>Adopt Form</Button></a>
             <br></br>
             <hr></hr>
             <p>Thank you for choosing to adopt a pet, and we can't wait to help you find your new best friend!</p>
